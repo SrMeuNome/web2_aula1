@@ -1,0 +1,85 @@
+/*Celular*/
+.conteiner
+{
+    display: flex;
+    justify-self: center;
+    justify-content: start;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #555555;
+}
+
+.title
+{
+    color: #ffffff;
+}
+
+table
+{
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+tr:not(:first-child):hover
+{
+    background-color: #ffbbbb;
+}
+
+@media screen and (max-width: 500px)
+{
+    .conteiner
+    {
+        width: 95vw;
+        height: 97vh;
+    }
+    .title
+    {
+        font-size: 12vw;
+    }
+
+    table, th, td, tr
+    {
+        border: solid 2px;
+        font-size: 4vw;
+    }
+}
+
+/*Tablets*/
+@media screen and (min-width: 501px)
+{
+    .conteiner
+    {
+        width: 97vw;
+        height: 97vh;
+    }
+    .title
+    {
+        font-size: 12vw;
+    }
+    table, th, td, tr
+    {
+        border: solid 2px;
+        font-size: 4vw;
+    }
+}
+
+/*TVs*/
+@media screen and (min-width: 701px)
+{
+    .conteiner
+    {
+        width: 98vw;
+        height: 97vh;
+    }
+    .title
+    {
+        font-size: 80px;
+    }
+    table, th, td, tr
+    {
+        border: solid 2px;
+        font-size: 25px;
+    }
+}
