@@ -30,8 +30,18 @@
                     <td>{{$automovel->cor}}</td>
                     <td>{{$automovel->placa}}</td>
                     <td>{{$automovel->fabricacao}}</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <form action="automovel/{{$automovel->id}}/edit" method="GET">
+                            <button type="submit">Editar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="automovel/{{$automovel->id}}" method="POST">
+                            @csrf
+                            <button type="submit">Excluir</button>
+                            <input type="hidden" name="_method" value="DELETE" />
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </thead>

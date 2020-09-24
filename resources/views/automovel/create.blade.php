@@ -19,7 +19,7 @@
             <label>Ano de Fabricação:<input type="number" name="fabricacao" /></label>
             @csrf
             <button type="submit">Salvar</button>
-            <button type="button" onclick="window.location='{{url('automovel')}}'">Cancelar</button>
+            <button type="button" onclick="window.location=`{{url('automovel')}}`">Cancelar</button>
         </form>
     </div>
 </body>

@@ -67,7 +67,10 @@ class ControllerAutomovel extends Controller
      */
     public function edit($id)
     {
-        //
+        $automovel = Automovel::find($id);
+        return view("automovel.edit", [
+            'automovel' => $automovel,
+        ]);
     }
 
     /**
@@ -79,7 +82,14 @@ class ControllerAutomovel extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $automovel = Automovel::find($id);
+        $automovel->marca = $request->post("marca");
+        $automovel->modelo = $request->post("modelo");
+        $automovel->cor = $request->post("cor");
+        $automovel->placa = $request->post("placa");
+        $automovel->fabricacao = $request->post("fabricacao");
+        $automovel->save();
+        return redirect('/automovel');
     }
 
     /**
@@ -90,6 +100,7 @@ class ControllerAutomovel extends Controller
      */
     public function destroy($id)
     {
-        //
+        Automovel::destroy($id);
+        return redirect('/automovel');
     }
 }
