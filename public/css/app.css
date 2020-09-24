@@ -1,48 +1,358 @@
-/*Celular*/
+body
+{
+    background-color:#03166A;
+}
+
 .conteiner
 {
     display: flex;
-    justify-self: center;
     justify-content: start;
-    align-self: center;
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background-color: #555555;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
+.conteiner-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
+.input-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .title
 {
-    color: #ffffff;
+    color: #000000;
 }
 
 table
 {
     border-collapse: collapse;
     background-color: #ffffff;
+    margin-bottom: 6vh;
+    text-align: center;
+    box-shadow: 3px 3px rgb(0,0,0,0.2);
 }
 
-tr:not(:first-child):hover
+table tr:first-child
 {
-    background-color: #ffbbbb;
+    background-color: #05BCFF !important;
+    color: #ffffff;
 }
 
+table tr:not(:first-child):hover
+{
+    background-color: #BBF5BB;
+}
+
+table tr:nth-child(odd)
+{
+    background-color: #dddddd;
+}
+   
+.editar
+{
+    border-radius: 500px;
+    background-color: #88ff88;
+    background-image: url("../img/edit.ico");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.editar:hover
+{
+    background-color: #ddffdd;
+}
+
+.editar:focus
+{
+    outline: none;
+}
+
+.editar:active
+{
+    background-color: #55ff55;
+    border-color: #55ff55;
+    outline: none;
+    border: none;
+}
+
+.excluir
+{
+    border-radius: 500px;
+    background-color: #ff8888;
+    background-image: url("../img/delete.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.excluir:hover
+{
+    background-color: #ffdddd;
+}
+
+.excluir:active
+{
+    background-color: #ff5555;
+    border-color: #ff5555;
+    outline: none;
+    border: none;
+}
+
+.excluir:focus
+{
+    outline: none;
+}
+
+.add
+{
+    background-color: #228822;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+
+.add:hover
+{
+    background-color: #88bb88;
+    border: none;
+    outline: none;
+}
+
+.add:active
+{
+    background-color: #005500;
+    border: none;
+    outline: none;
+}
+
+.add:focus
+{
+    border: none;
+    outline: none;
+}
+
+.salvar
+{
+    background-color: #228822;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+
+.salvar:hover
+{
+    background-color: #88bb88;
+    border: none;
+    outline: none;
+}
+
+.salvar:active
+{
+    background-color: #005500;
+    border: none;
+    outline: none;
+}
+
+.salvar:focus
+{
+    border: none;
+    outline: none;
+}
+
+.cancelar
+{
+    background-color: #882222;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+
+.cancelar:hover
+{
+    background-color: #bb8888;
+    border: none;
+    outline: none;
+}
+
+.cancelar:active
+{
+    background-color: #550000;
+    border: none;
+    outline: none;
+}
+
+.cancelar:focus
+{
+    border: none;
+    outline: none;
+}
+
+fieldset
+{
+    border-radius: 10px;
+    padding-top: 50px;
+    box-shadow: 3px 3px rgb(0,0,0,0.2);
+}
+
+legend
+{
+    
+}
+
+input:focus
+{
+    outline: none;
+    border-color: #aaffaa;
+    border-radius: 3px;
+    border-width: 2px;
+}
+
+.label-up
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+input
+{
+    margin-left: initial;
+}
+
+.button-group
+{
+    float: right;
+}
+
+/*SmartPhones*/
 @media screen and (max-width: 500px)
 {
     .conteiner
     {
-        width: 95vw;
+        width: 85vw;
+        height: 97vh;
+    }
+    .conteiner-center
+    {
+        width: 85vw;
         height: 97vh;
     }
     .title
     {
-        font-size: 12vw;
+        font-size: 8vw;
     }
 
     table, th, td, tr
     {
-        border: solid 2px;
-        font-size: 4vw;
+        border: solid 2px #000000;
+    }
+    
+    table th
+    {
+        font-size: 3vw;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    table td
+    {
+        font-size: 3vw;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    table
+    {
+        width: 80vw;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .editar
+    {
+        width: 15px;
+        height: 15px;
+        font-size: 2vw;
+        background-size: 10px;
+    }
+
+    .excluir
+    {
+        width: 15px;
+        height: 15px;
+        font-size: 2vw;
+        background-size: 13px;
+    }
+
+    .add
+    {
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .salvar
+    {
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .cancelar
+    {
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .input-container
+    {
+        padding: 1px;
+        height: 170px;
+        width: 60vw;
+        flex-direction: column !important;
+    }
+
+    input
+    {
+        height: 30px;
+        font-size: 18px;
+    }
+
+    legend
+    {
+        font-size: 25px;
+    }
+
+    .label-up
+    {
+        margin-left: 1px;
+        margin-bottom: 15px;
+    }
+
+    fieldset
+    {
+        height: 60vh;
+        width: 72vw;
     }
 }
 
@@ -51,26 +361,140 @@ tr:not(:first-child):hover
 {
     .conteiner
     {
-        width: 97vw;
+        width: 90vw;
+        height: 97vh;
+    }
+    .conteiner-center
+    {
+        width: 90vw;
         height: 97vh;
     }
     .title
     {
-        font-size: 12vw;
+        font-size: 10vw;
     }
     table, th, td, tr
     {
-        border: solid 2px;
-        font-size: 4vw;
+        border: solid 2px #000000;
+    }
+
+    table th
+    {
+        font-size: 3vw;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    table td
+    {
+        font-size: 2vw;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    table
+    {
+        width: 80vw;
+    }
+
+    .editar
+    {
+        width: 25px;
+        height: 25px;
+        font-size: 2vw;
+        background-size: 15px;
+    }
+
+    .excluir
+    {
+        width: 25px;
+        height: 25px;
+        font-size: 2vw;
+        background-size: 17px;
+    }
+
+    .add
+    {
+        width: 85px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .salvar
+    {
+        width: 85px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .cancelar
+    {
+        width: 85px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .input-container
+    {
+        height: 12vh;
+        width: 70vw;
+    }
+
+    legend
+    {
+        font-size: 20px;
+    }
+
+    input
+    {
+        height: 20px;
+        font-size: 18px;
+    }
+
+    .label-up
+    {
+        padding: 1px;
+        margin-left: 1px;
+        margin-bottom: initial;
+    }
+
+    #marca
+    {
+        width: 120px;
+    }
+
+    #modelo
+    {
+        width: 120px;
+    }
+
+    #cor
+    {
+        width: 100px;
+    }
+
+    #placa
+    {
+        width: 80px;
+    }
+
+    #fabricacao
+    {
+        width: 80px;
     }
 }
 
 /*TVs*/
-@media screen and (min-width: 701px)
+@media screen and (min-width: 901px)
 {
     .conteiner
     {
-        width: 98vw;
+        width: 800px;
+        height: 97vh;
+    }
+    .conteiner-center
+    {
+        width: 800px;
         height: 97vh;
     }
     .title
@@ -79,7 +503,109 @@ tr:not(:first-child):hover
     }
     table, th, td, tr
     {
-        border: solid 2px;
+        border: solid 2px #000000;
+    }
+
+    table th
+    {
         font-size: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    table td
+    {
+        font-size: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    table
+    {
+        width: 650px;
+    }
+
+    .editar
+    {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+        background-size: 18px;
+    }
+
+    .excluir
+    {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+        background-size: 20px;
+    }
+
+    .add
+    {
+        width: 90px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .salvar
+    {
+        width: 90px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .cancelar
+    {
+        width: 90px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .input-container
+    {
+        height: 55px;
+        width: 700px;
+    }
+
+    legend
+    {
+        font-size: 30px;
+    }
+
+    input
+    {
+        height: 20px;
+        font-size: 18px;
+    }
+
+    .label-up
+    {
+        margin-left: 20px;
+    }
+
+    #marca
+    {
+        width: 200px;
+    }
+
+    #modelo
+    {
+        width: 200px;
+    }
+
+    #cor
+    {
+        width: 150px;
+    }
+
+    #placa
+    {
+        width: 120px;
+    }
+
+    #fabricacao
+    {
+        width: 120px;
     }
 }

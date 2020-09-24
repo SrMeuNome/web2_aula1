@@ -32,13 +32,13 @@
                     <td>{{$automovel->fabricacao}}</td>
                     <td>
                         <form action="automovel/{{$automovel->id}}/edit" method="GET">
-                            <button type="submit">Editar</button>
+                            <button class="editar" type="submit"></button>
                         </form>
                     </td>
                     <td>
                         <form action="automovel/{{$automovel->id}}" method="POST">
                             @csrf
-                            <button type="submit">Excluir</button>
+                            <button class="excluir" type="submit"></button>
                             <input type="hidden" name="_method" value="DELETE" />
                         </form>
                     </td>
@@ -46,8 +46,9 @@
                 @endforeach
             </thead>
         </table>
+
         <form action="automovel/create" method="GET">
-            <button type="submit">Adicionar</button>
+            <button class="add" type="submit">Adicionar</button>
         </form>
     </div>
 </body>
